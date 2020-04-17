@@ -27,7 +27,6 @@ class Navbar extends Component {
             <li><Link className="navbar-brand navLink" to="/home">Discover</Link></li>
             <li><Link className="navbar-brand navLink" to="/profile">Profile</Link></li>
             <li><Link className="navbar-brand navLink" to="" onClick={API.logout}>Log Out</Link></li>
-            {/* <li><button onClick={API.logout}>LogoutTest</button></li> */}
           </ul>
         </div>
       </nav>

@@ -5,9 +5,6 @@ import AddButton from "../AddButton";
 function ComicCards(props) {
   return (
     <div>
-      {/* //conditional with statement and question mark to check and see if something is in array */}
-      {/* //below is kind of like a mini if else statement */}
-      {/* // below that is what to do */}
       {props.sortedComics.length > 0 ? (
         props.sortedComics.map((result) => {
           let url;
@@ -30,7 +27,6 @@ function ComicCards(props) {
                     />
                   </div>
                   <div className="card-content">
-                    {/* <p>Title: {result.title}</p> */}
                     <p>Series: {series}</p>
                     <p>Issue: {result.issueNumber}</p>
                     <p>Writer: {writer}</p>
@@ -41,7 +37,6 @@ function ComicCards(props) {
           } else {
             url = `${result.images[0].path}/portrait_uncanny.${result.images[0].extension}`;
           }
-          // let buyLink = `${result.urls[1].url}`;
           return (
             <div className="col s6 m4 l3" key={result.id} style={{ minHeight: "775px" }}>
               <div className="card">
@@ -55,7 +50,6 @@ function ComicCards(props) {
                   />
                 </div>
                 <div className="card-content" style={{minHeight: "140px"}}>
-                  {/* <p>Title: {result.title}</p> */}
                   <p>Series: {series}</p>
                   <p>Issue: {result.issueNumber}</p>
                   <p>Writer: {writer}</p>

@@ -2,8 +2,6 @@ import React, { useState, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import API from "../utils/login-api";
 import contextStore from "../utils/contextStore";
-import "../styles/login.css";
-// import { get } from "mongoose";
 
 function Login() {
   const {user, setUser} = useContext(contextStore);

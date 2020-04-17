@@ -69,7 +69,6 @@ function SignupCard({handleSubmit}) {
                   type="password"
                   name="password"
                   className="validate"
-
                 />
                 <label className="white-text" htmlFor="password">
                   Password
