@@ -4,7 +4,7 @@ import "./style.css";
 function Search(props) {
   return (
     <form className="form" onSubmit={props.handleSearch}>
-      <input className="form-control" id="pulse" type="search" placeholder="Search" aria-label="Search" id="searchTerm"
+      <input className="form-control" id="pulse, searchTerm" type="search" placeholder="Keyword" aria-label="Search"
         value={props.searchString}
         onChange={props.handleChange}
       />

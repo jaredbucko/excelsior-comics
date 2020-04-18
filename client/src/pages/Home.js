@@ -1,5 +1,4 @@
-import React, { Component, useContext } from "react";
-// import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import marvel from "../utils/marvel-api";
 import Navbar from "../components/Navbar";
 import Search from "../components/Search";
