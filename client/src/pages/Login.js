@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import API from "../utils/login-api";
 import contextStore from "../utils/contextStore";
+import Carousel from "../components/Carousel";
 
 function Login() {
   const {user, setUser} = useContext(contextStore);
@@ -37,52 +38,60 @@ function Login() {
   }
 
   return (
-    user? <Redirect to="/home" />:
-          <div className="container" id="main">
-      <div className="row">
-        <div className="col s12">
-          <h1 className="title center-align" id="title">Excelsior Comics</h1>
-          <h5 className="center-align">Discover new comics and connect with fellow fans</h5>
-        </div>
-      </div>
-      <form onSubmit={(e) => {e.preventDefault();submitForm(e)}}>
+    user ? <Redirect to="/home" /> :
+      <div>
+
+        <Carousel />
+
+      <div className="container">
+
         <div className="row">
           <div className="col s12">
-            <div className="row">
-              <div className="input-field col s12 m6">
-                <input id="email" type="email" name="email" className="validate" onChange={e => handleChange(e)}/>
-                <label htmlFor="email">Email</label>
+            <h1 className="title center-align" id="title">Excelsior Comics</h1>
+            <h5 className="center-align">Discover new comics and connect with fellow fans</h5>
+          </div>
+        </div>
+
+        <form onSubmit={(e) => {e.preventDefault();submitForm(e)}}>
+
+          <div className="row">
+            <div className="col s12">
+              <div className="row">
+                <div className="input-field col s12 m6">
+                  <input id="email" type="email" name="email" className="validate" onChange={e => handleChange(e)}/>
+                  <label htmlFor="email">Email</label>
+                </div>
+                <div className="input-field col s12 m6">
+                  <input id="password" type="password" name="password" className="validate" onChange={e => handleChange(e)}/>
+                  <label htmlFor="password">Password</label>
+                </div>
               </div>
-              <div className="input-field col s12 m6">
-                <input id="password" type="password" name="password" className="validate" onChange={e => handleChange(e)}/>
-                <label htmlFor="password">Password</label>
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-field col s12">
-                <button
-                  className="btn waves-effect waves-light"
-                  type="submit"
-                  name="action" id="btn"
-                >
-                  Log In
-                </button>
-              </div>
-              <div className="input-field col s12" id="options">
-                <p>
-                  Don't have an account yet? Sign up{" "}
-                  <Link to="/signup">here</Link>
-                </p>
-                <p>
-                  Click <Link to="/home">here</Link> to explore as a guest
-                </p>
+              <div className="row">
+                <div className="input-field col s12">
+                  <button
+                    className="btn waves-effect waves-light"
+                    type="submit"
+                    name="action" id="btn"
+                  >
+                    Log In
+                  </button>
+                </div>
+                <div className="input-field col s12" id="options">
+                  <p>
+                    Don't have an account yet? Sign up{" "}
+                    <Link to="/signup">here</Link>
+                  </p>
+                  <p>
+                    Click <Link to="/home">here</Link> to explore as a guest
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
-    </div>
-
+          
+        </form>
+      </div>
+      </div>
   );
 }
 
