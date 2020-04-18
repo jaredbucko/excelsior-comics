@@ -4,7 +4,7 @@ import "./style.css";
 
 function Footer() {
     return (
-      <div className="row valign-wrapper" id="footer" style={{backgroundColor: "#740D1B"}}>     
+      <div className="row valign-wrapper" id="footer">     
         <h5 className="center-align" id="copyright"><Link to="/home" className="footerLink">©2020 Caitlin Avner, Jared Bucko, Elizabeth Garcia-Quilinquin, Luke Robinett</Link></h5>
       </div>
     );

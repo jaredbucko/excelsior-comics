@@ -41,8 +41,8 @@ function Login() {
           <div className="container" id="main">
       <div className="row">
         <div className="col s12">
-          <h1 className="title center-align" id="title">Welcome to Excelsior Comics!</h1>
-          <h5 className="center-align">Discover new comics and connect with fellow fans. Happy hunting!</h5>
+          <h1 className="title center-align" id="title">Excelsior Comics</h1>
+          <h5 className="center-align">Discover new comics and connect with fellow fans</h5>
         </div>
       </div>
       <form onSubmit={(e) => {e.preventDefault();submitForm(e)}}>
@@ -69,13 +69,13 @@ function Login() {
                 </button>
               </div>
               <div className="input-field col s12" id="options">
-                <h5>
+                <p>
                   Don't have an account yet? Sign up{" "}
                   <Link to="/signup">here</Link>
-                </h5>
-                <h5>
+                </p>
+                <p>
                   Click <Link to="/home">here</Link> to explore as a guest
-                </h5>
+                </p>
               </div>
             </div>
           </div>

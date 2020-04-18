@@ -7,7 +7,6 @@ import ComicCards from "../components/ComicCards";
 import API from "../utils/login-api";
 import favoritesApi from "../utils/favorites-api";
 import contextStore from "../utils/contextStore";
-// import "../styles/home.css"
 
 class Home extends Component {
   state = {
@@ -51,15 +50,10 @@ class Home extends Component {
           <div>
             <Navbar />
             <div className="container">
-              {console.log(props)}
               <div className="row">
                 <div className="col s12">
                   <h5 className="center-align" style={{ marginTop: "35px" }}>
-                    Search by keyword and click{" "}
-                    <a className="btn-floating waves-effect waves-light red">
-                      <i className="material-icons">add</i>
-                    </a>{" "}
-                    to add a title to your reading list!
+                    Search by keyword and click <p className="btn-floating waves-effect waves-light blue"><i className="material-icons">add</i></p> to add a title to your reading list!
                   </h5>
                 </div>
               </div>

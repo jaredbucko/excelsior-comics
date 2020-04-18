@@ -21,7 +21,7 @@ class Navbar extends Component {
 
       <nav>
         <div className="nav-wrapper">
-          <p className="brand-logo" id="app-logo"><Link to="/home">Excelsior Comics</Link></p>
+          <p className="brand-logo" style={{paddingLeft: "15px", margin: "0"}}><Link to="/home">Excelsior Comics</Link></p>
           <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><Link className="navbar-brand navLink" to="/home">Discover</Link></li>
